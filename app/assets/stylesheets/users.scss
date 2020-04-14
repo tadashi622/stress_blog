@@ -1,0 +1,26 @@
+.input{
+  height: 30px;
+  width: 600pxpx;
+  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
+}
+
+.submit{
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #00BCD4;
+  background: #ECECEC;
+  border-radius: 0 15px 15px 0;
+  transition: .4s;
+}
+
+.paginate{
+  padding:2em;
+  display:flex;
+  justify-content:center;
+  background:#f3f3f3;
+  text-decoration: none;
+}
+

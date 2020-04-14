@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__title">
+        <%= link_to "Blog", root_path, class: "header__title--text" %>
+      </div>
+      <div class="header__right">
+        <% if user_signed_in?  %>
+              <img src=<%= current_user.image %> class = "image">
+          <%= link_to current_user.nickname, user_path(current_user), class: "header__right--btn" %>
+          <%= link_to "新規投稿", new_post_path, class: "header__right--btn" %>
+            <i class="fas fa-pen-nib fa-2x"></i>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+            <i class="fas fa-sign-out-alt fa-2x"></i>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+            <i class="fas fa-sign-in-alt fa-3x"></i>
+          <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+            <i class="fas fa-address-card fa-3x"></i>
+        <% end %>
+      </div>
+    </header>
+    <div class="contents">
+      <%= yield %>
+    </div>
+        <%# <%= paginate(@posts) %>
+  </body>
+</html>
