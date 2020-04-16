@@ -1,0 +1,11 @@
+<div class="like-link" id="like-link-<%= post.id%>">
+  <% if post.likes.find_by(post_id: post.id) %>
+    <%= link_to unlike_path(post.id), method: :delete, remote: true do %>
+        <div class = "iine__button">体調👍</div>
+    <% end %>
+  <% else %>
+    <%= link_to like_path(post.id), method: :post, remote: true do %>
+        <div class = "dame__button">体調👎</div>
+    <% end %>
+  <% end %>
+</div>

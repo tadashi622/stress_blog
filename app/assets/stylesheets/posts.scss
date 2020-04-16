@@ -37,6 +37,7 @@ body{
       padding: 10px;
       border-bottom: 1px solid #f6f6f6;
       display: flex;
+      justify-content: space-between;
       &__left{
         padding-right: 20px;
         &--image{
