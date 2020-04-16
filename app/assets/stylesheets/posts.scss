@@ -29,15 +29,16 @@ body{
   .contents{
     margin: 30px auto 0;
     background-color: #fff;
-    height: 600px;
     width: 70%;
-    overflow: scroll;
     text-align: center;
     .content{
+      overflow: scroll;
       padding: 10px;
       border-bottom: 1px solid #f6f6f6;
       display: flex;
       justify-content: space-between;
+      border: solid 1px black;
+      border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
       &__left{
         padding-right: 20px;
         &--image{
@@ -78,6 +79,9 @@ body{
         padding-top: 30px;
         text-align: center;
       }
+    }
+    .contents-row{
+      
     }
     .postTitle{
       padding-top: 20px;

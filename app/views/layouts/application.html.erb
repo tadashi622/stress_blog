@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="header__title">
-        <%= link_to "Health　Blog", root_path, class: "header__title--text" %>
+        <%= link_to "Health Blog", root_path, class: "header__title--text" %>
       </div>
       <div class="header__right">
         <% if user_signed_in?  %>
@@ -31,6 +31,5 @@
     <div class="contents">
       <%= yield %>
     </div>
-        <%# <%= paginate(@posts) %>
   </body>
 </html>
